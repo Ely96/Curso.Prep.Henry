@@ -16,7 +16,7 @@ const nuevaResta = 10 - 5 === 5;
 const nuevaMultiplicacion = 10 * 4 === 40 ;
 
 // Resuelve el siguiente problema matemático:
-const nuevoModulo = 21 % 5 === 1.05;
+const nuevoModulo = 21 % 5 == 1;
 
 
 // En los próximos 22 problemas, deberás completar la función.
@@ -70,11 +70,12 @@ function sonIguales(x, y) {
 
 
 function tienenMismaLongitud(str1, str2) { 
-  if (str1.lenght == str2.lenght) {
-    return true;
-  }
-  return false;
+  if(str1.length === str2.length) {
+  return true;
 }
+return false;
+}
+
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
@@ -105,7 +106,7 @@ function mayorQueCincuenta(num) {
   
 
 
-function obtenerResto(x, y) { return x / y == numero;
+function obtenerResto(x, y) {return x % y;
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
   
@@ -124,7 +125,7 @@ function esPar(num) {
 
 
 function esImpar(num) {
-  if (num 2 % === 1) {
+  if (num % 2 == 1) {
     return true;
 } 
   return false;
@@ -135,44 +136,54 @@ function esImpar(num) {
   
 
 
-function elevarAlCuadrado(num) { return num * 2;  
+function elevarAlCuadrado(num) { return num ** 2; 
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
   
 }
 
-function elevarAlCubo(num) {
+function elevarAlCubo(num) { return num ** 3;
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
   
 }
 
-function elevar(num, exponent) {
+function elevar(num, exponent) { return Math.pow(num,exponent);
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
   
 }
 
-function redondearNumero(num) {
+function redondearNumero(num) {  return Math.round(num);
   // Redondea "num" al entero más próximo y devuélvelo
-  // Tu código:
+  // Tu código: 
   
 }
 
-function redondearHaciaArriba(num) {
+function redondearHaciaArriba(num) { return Math.ceil(num);
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
   
 }
 
-function numeroRandom() {
+function numeroRandom() { return Math.random(0,1);
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
   
 }
 
-function esPositivo(numero) {
+function esPositivo(numero) { 
+  if(numero === 0) {
+    return false;
+   } 
+   else if(numero > 0) {
+     return'Es positivo';
+      }
+      else{  
+  return'Es negativo'
+    }
+  
   //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
@@ -180,63 +191,78 @@ function esPositivo(numero) {
   
 }
 
-function agregarSimboloExclamacion(str) {
+function agregarSimboloExclamacion(str) { var agregar= str + '!';
+return agregar; 
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
 }
 
-function combinarNombres(nombre, apellido) {
+function combinarNombres(nombre, apellido) {var combinado= nombre + ' ' + apellido;
+return combinado;
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
   
+  
 }
 
-function obtenerSaludo(nombre) {
+function obtenerSaludo(nombre) { return 'Hola ' + nombre + '!';
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
   
 }
 
-function obtenerAreaRectangulo(alto, ancho) {
+function obtenerAreaRectangulo(alto, ancho) { areaRectangulo= alto * ancho;
+  return areaRectangulo;
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
   
 }
 
 
-function retornarPerimetro(lado){
+function retornarPerimetro(lado){ perimetro= lado + lado + lado + lado;
+  return perimetro;
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
   
 }
 
 
-function areaDelTriangulo(base, altura){
+function areaDelTriangulo(base, altura){ calcular= base * altura / 2;
+  return calcular;
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
 
 }
 
 
-function deEuroAdolar(euro){
+function deEuroAdolar(euro){ 
+  return euro * 1.20
+}
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
   
+
+
+
+function esVocal(letra){ 
+  if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
+    return "Es vocal"
+  }
+  return "Dato incorrecto"
+
 }
 
-
-function esVocal(letra){
   //Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”. 
   //Verificar si el usuario ingresó un string de más de un carácter, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
   
-}
+
 
 
 
@@ -277,4 +303,4 @@ module.exports = {
   areaDelTriangulo,
   deEuroAdolar,
   esVocal,
-};
+}; 
